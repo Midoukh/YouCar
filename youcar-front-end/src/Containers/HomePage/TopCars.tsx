@@ -77,21 +77,78 @@ export const TopCars = () => {
   const isMobile = useMediaQuery(`(max-width: ${SCREENS.small})`);
 
   const { setTopCars } = actionDispatch(useDispatch());
-  const { topCars } = useSelector(stateSelector);
+  // const { topCars } = useSelector(stateSelector);
+  const topCars = [
+    {
+      id: "537b2b31-a54d-46da-9207-882821995d5f",
+      name: "Picanto",
+      thumbnailUrl:
+        "https://firebasestorage.googleapis.com/v0/b/picste-69286.appspot.com/o/yourcar%2Fpicanto-removebg-preview.png?alt=media&token=55021531-8be6-4260-8aef-bff4e22e1852",
+      gear: "AutoMatic",
+      dailyPrice: 100,
+      monthlyPrice: 1800,
+      mileage: "5k",
+      gas: "AutoMatic",
+    },
+    {
+      id: "706763f4-4349-4d92-8a47-87ea1d9f24ac",
+      name: "308 GET Line",
+      thumbnailUrl:
+        "https://firebasestorage.googleapis.com/v0/b/picste-69286.appspot.com/o/yourcar%2F308-removebg-preview.png?alt=media&token=854c047c-15b2-462d-86b0-952b33fd8b1e",
+      gear: "Manual",
+      dailyPrice: 180,
+      monthlyPrice: 2700,
+      mileage: "10k",
+      gas: "AutoMatic",
+    },
+    {
+      id: "8787168c-c3f8-40db-9138-e074e97e933f",
+      name: "Audi TT RS",
+      thumbnailUrl:
+        "https://firebasestorage.googleapis.com/v0/b/picste-69286.appspot.com/o/yourcar%2Ftt-removebg-preview.png?alt=media&token=64923b67-c286-4121-b7db-bdf52b0a90a4",
+      gear: "AutoMatic",
+      dailyPrice: 380,
+      monthlyPrice: 3500,
+      mileage: "20k",
+      gas: "AutoMatic",
+    },
+    {
+      id: "da07b4b8-43f3-4c34-9edd-005d744e5556",
+      name: "Clio 4 GET Line",
+      thumbnailUrl:
+        "https://firebasestorage.googleapis.com/v0/b/picste-69286.appspot.com/o/yourcar%2Fclio_4-removebg-preview.png?alt=media&token=bebd4708-2503-4d01-aee1-09c4639ba3a5",
+      gear: "Manual",
+      dailyPrice: 100,
+      monthlyPrice: 2200,
+      mileage: "50k",
+      gas: "AutoMatic",
+    },
+    {
+      id: "f7175a10-6e16-4644-9708-db35252b191c",
+      name: "Audi S3 Car",
+      thumbnailUrl:
+        "https://cdn.jdpower.com/Models/640x480/2017-Audi-S3-PremiumPlus.jpg",
+      gear: "Auto",
+      dailyPrice: 70,
+      monthlyPrice: 1600,
+      mileage: "10k",
+      gas: "AutoMatic",
+    },
+  ];
 
   console.log(topCars);
-  const fetchTopCars = async () => {
-    setLoading(true);
-    const cars = await CarsService.getCars().catch((err) => {
-      console.log(err);
-    });
-    console.log("Cars", cars);
-    if (cars) setTopCars(cars);
-    setLoading(false);
-  };
+  // const fetchTopCars = async () => {
+  //   setLoading(true);
+  //   const cars = await CarsService.getCars().catch((err) => {
+  //     console.log(err);
+  //   });
+  //   console.log("Cars", cars);
+  //   if (cars) setTopCars(cars);
+  //   setLoading(false);
+  // };
 
   useEffect(() => {
-    fetchTopCars();
+    // fetchTopCars();
   }, []);
   const isEmptyTopCars = !topCars || topCars.length === 0;
   const cars =
