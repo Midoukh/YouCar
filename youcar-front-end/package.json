@@ -1,0 +1,76 @@
+{
+  "name": "youcar",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index",
+  "typings": "dist/index",
+  "dependencies": {
+    "@apollo/client": "^3.4.16",
+    "@brainhubeu/react-carousel": "^2.0.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react-burger-menu": "^2.8.1",
+    "@types/react-dom": "^17.0.0",
+    "@types/redux-logger": "^3.0.9",
+    "@types/styled-components": "^5.1.12",
+    "express": "^4.17.1",
+    "graphql": "^15.6.1",
+    "react": "^17.0.2",
+    "react-burger-menu": "^3.0.6",
+    "react-calendar": "^3.4.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-scripts": "4.0.3",
+    "react-spinners": "^0.11.0",
+    "redux": "^4.1.1",
+    "redux-logger": "^3.0.6",
+    "reselect": "^4.0.0",
+    "styled-components": "^5.3.1",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "schema:download": "npx apollo service:download --endpoint=http://localhost:9000/graphql ./src/graphql-schema.json",
+    "schema:generate-watch": "npx apollo codegen:generate --localSchemaFile=./src/graphql-schema.json --target=typescript --tagName=gql --watch"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^5.0.0-beta.4",
+    "@material-ui/icons": "^5.0.0-beta.4",
+    "@types/brainhubeu__react-carousel": "^2.0.4",
+    "@types/react": "^17.0.21",
+    "@types/react-calendar": "^3.4.3"
+  }
+}
